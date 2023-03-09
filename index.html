@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Tu Agenda de contactos</h1>
+        <nav>
+            <ul>
+                <li onclick="viewSection()">Añadir Contacto</li>
+                <li onclick="loadContact()">Ver contactos</li>
+            </ul>
+        </nav>
+    </header>
+<main>
+
+
+    <section class="add-contacto">
+        <div class="add-contacto__container">
+            <h2>Añade un contacto</h2>
+            <form class="form-add">
+                <div class="contacto-name">
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <input type="text" placeholder="Ingrese el nombre" id="valueName" required>
+                </div>
+                <div class="contacto-phone">
+                    <div class="icon">
+                        <i class="fa-sharp fa-solid fa-phone"></i>
+                    </div>
+                    <input type="number" placeholder="Ingrese el teléfono" id="valuePhone" required>
+                </div>
+                <div class="contacto-mail">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <input type="email" placeholder="Ingrese el email" id="valueEmail" required>
+                </div>
+
+                <button type="button" onclick="selectData()">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contacts-load">
+        <div class="contacts-load__container">
+            <h2>Tus contactos</h2>
+            <form>
+                <label for="buscar">Buscar contacto: </label>
+                <input type="text" id="valueSearch">
+                <button type="button" onclick="search()">Buscar</button>
+            </form>
+            <div class="contacts__content">
+                
+            </div>
+        </div>
+    </section>
+</main>
+    <dialog id="modal">
+        <h2>Editar contacto</h2>
+        
+        <form>
+            <div class="contacto-name">
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <input type="text" id="editName" required>
+            </div>
+            <div class="contacto-phone">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                </div>
+                <input type="number" id="editPhone" required>
+            </div>
+            <div class="contacto-mail">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <input type="email" id="editEmail" required>
+            </div>
+            <button type="button" id="button__send" onclick="saveChange()">Enviar cambios</button>
+        </form>
+        <div id="close-modal" class="fa-solid fa-x">
+            
+        </div>
+    </dialog>
+
+    <span class="message-confirm">
+        
+    </span>
+    <script src="app.js"></script>
+</body>
+</html>

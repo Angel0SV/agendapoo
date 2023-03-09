@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url('https://i.pinimg.com/originals/77/42/0d/77420df3f9e33db5b79ee25455d3340e.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 12px;
+}
+nav {
+    margin-top: 10px;
+    padding: 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+nav ul li {
+    list-style: none;
+    padding: 8px;
+    color: black;
+    background-color: #23C0D8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+main {
+    height: calc(100vh - 125px);
+    display: grid;
+    place-items: center;
+}
+.add-contacto__container {
+    width: 400px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 12px gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.add-contacto__container h2, #modal h2{
+    text-align: center;
+    padding: 8px 0;
+    background-color: #14A083;
+    color: white;
+}
+.add-contacto__container form, #modal form{
+    padding: 12px 30px;
+    background-color: white;
+}
+.add-contacto__container form > div, #modal form > div{
+    display: flex;
+    
+    margin-bottom: 10px;
+}
+.add-contacto__container form > div input, #modal form > div input{
+    height: 40px;
+    width: calc(100% - 40px);
+    padding: 0 8px;
+    outline: none;
+    border: 1px solid gainsboro;
+}
+.add-contacto__container form > div > div, #modal form > div > div {
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    background-color: #14A083;
+    color: white;
+}
+.add-contacto__container form button, #modal form button{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 0;
+    border: none;
+    color: white;
+    background-color: #14A083;
+    cursor: pointer;
+}
+.contacts-load {
+    display: none;
+}
+.contacts-load__container {
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 7px gainsboro;
+    background-color: white;
+}
+.contacts-load__container h2 {
+    text-align: center;
+    padding: 6px 0;
+    background-color: #14A083;
+    color: white;
+}
+.contacts-load__container form {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contacts-load__container form input {
+    outline: none;
+    margin-left: 6px;
+    padding: 4px;
+    width: 220px;
+    border: 1px solid gainsboro;
+}
+.contacts-load__container form button {
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.contacts-load__container form input:focus {
+    box-shadow: 0 0 2px #23C0D8;
+}
+.contacts__content .contacts__content__element {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 8px 0;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+.contacts__content .contacts__content__element #button__edit {
+    background-color: orange;
+    border: none;
+    color: antiquewhite;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contacts__content .contacts__content__element #button__delete {
+    background-color: deeppink;
+    border: none;
+    color: antiquewhite;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#modal {
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.551);
+}
+#modal #close-modal {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.message-confirm {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: calc(50% - 75px);
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white ;
+    padding: 4px 8px;
+    border-radius: 5px;
+    /* background-color: orange; */
+}
